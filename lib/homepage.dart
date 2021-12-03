@@ -152,9 +152,11 @@ class _HomePageState extends State<HomePage>
         children: contentViews
             .map((e) => Container(
                   child: ListTile(
-                    title: Text(e.tab.title),
-                    onTap: () => tabController.index = contentViews.indexOf(e),
-                  ),
+                      title: Text(e.tab.title),
+                      onTap: () {
+                        tabController.index = contentViews.indexOf(e);
+                        scaffoldKey.currentState!.openDrawer();
+                      }),
                 ))
             .toList(),
       ),
