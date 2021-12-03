@@ -7100,7 +7100,7 @@ HD:function HD(){},
 xN:function xN(a){this.a=a},
 py:function py(a){this.a=a},
 tj:function tj(a){var _=this
-_.d=0
+_.d=14
 _.a=null
 _.b=a
 _.c=null},
@@ -30241,7 +30241,7 @@ A.Bh.prototype={}
 A.HD.prototype={
 ga7(a){return a.name}}
 A.xN.prototype={
-K(a,b){return new A.pk(B.Az,"Flutter Demo",A.a3z(null,B.lM),null)}}
+K(a,b){return new A.pk(B.Az,"Bahonika's portfolio",A.a3z(null,B.lM),null)}}
 A.py.prototype={
 aL(){return new A.tj(B.n)}}
 A.tj.prototype={
@@ -49356,7 +49356,7 @@ B.D4=new A.n(!1,null,null,null,null,null,15,B.bs,null,null,null,B.t,null,null,nu
 B.Fl=new A.n(!1,null,null,null,null,null,11,B.w,null,null,null,B.t,null,null,null,null,null,null,null,null,null,"tall overline 2014",null,null,null)
 B.FJ=new A.cC(B.Dx,B.Dy,B.Dz,B.DA,B.El,B.D5,B.CR,B.F8,B.DY,B.DZ,B.DB,B.D4,B.Fl)
 B.FK=new A.Aw(1,"longestLine")
-B.FL=new A.mC("You have pushed the button this many times:",null,null,null)
+B.FL=new A.mC("\u0418\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435",null,null,null)
 B.IF=new A.SL(0,"system")
 B.FM=new A.r5(null)
 B.d8=new A.r7(0,"clamp")
