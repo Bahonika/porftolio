@@ -12,7 +12,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
+  var scaffoldKey = GlobalKey<ScaffoldState>();
   late double screenHeight;
+  late double screenWidth;
   late TabController tabController;
 
   List<ContentView> contentViews = [
@@ -24,7 +26,11 @@ class _HomePageState extends State<HomePage>
           child: Container(
             height: 100,
             width: 100,
-            color: Colors.green,
+            decoration: const BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(25.0),
+                    bottomLeft: Radius.circular(25.0))),
           ),
         )),
     ContentView(
@@ -35,7 +41,11 @@ class _HomePageState extends State<HomePage>
           child: Container(
             height: 100,
             width: 100,
-            color: Colors.red,
+            decoration: const BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(25.0),
+                    bottomLeft: Radius.circular(25.0))),
           ),
         )),
     ContentView(
@@ -46,7 +56,11 @@ class _HomePageState extends State<HomePage>
           child: Container(
             height: 100,
             width: 100,
-            color: Colors.blue,
+            decoration: const BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(25.0),
+                    bottomLeft: Radius.circular(25.0))),
           ),
         )),
   ];
@@ -67,12 +81,15 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
+    screenWidth = MediaQuery.of(context).size.width;
     double topPadding = screenHeight * 0.05;
 
     return Scaffold(
         backgroundColor: Colors.grey[900],
+        endDrawer: drawer(),
+        key: scaffoldKey,
         body: Padding(
-          padding:  EdgeInsets.only(top: topPadding),
+          padding: EdgeInsets.only(top: topPadding),
           child: LayoutBuilder(builder: (context, constraints) {
             if (constraints.maxWidth > 715) {
               return desctopView();
@@ -103,6 +120,44 @@ class _HomePageState extends State<HomePage>
   }
 
   Widget mobileView() {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.only(right: 8.0),
+      child: Container(
+        width: screenWidth,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            IconButton(
+              onPressed: () => scaffoldKey.currentState!.openEndDrawer(),
+              icon: const Icon(Icons.menu_rounded),
+              color: Colors.grey,
+            ),
+            Container(
+              height: screenHeight * 0.85,
+              child: TabBarView(
+                controller: tabController,
+                children: contentViews.map((e) => e.content).toList(),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget drawer() {
+    return Drawer(
+      child: ListView(
+        children: contentViews
+            .map((e) => Container(
+                  child: ListTile(
+                    title: Text(e.tab.title),
+                    onTap: () => tabController.index = contentViews.indexOf(e),
+                  ),
+                ))
+            .toList(),
+      ),
+    );
   }
 }

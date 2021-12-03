@@ -17,13 +17,13 @@ class CustomTabBar extends StatelessWidget {
 
     return Container(
         width: screenWidth * widthScale,
-
         child: Theme(
           data: ThemeData(
-            hoverColor: Colors.red,
+            hoverColor: Colors.red.withOpacity(0.2),
+            splashColor: Colors.red,
+            highlightColor: Colors.transparent
           ),
           child: TabBar(
-
             controller: controller,
             tabs: tabs,
           ),
