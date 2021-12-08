@@ -86,6 +86,7 @@ class _ProjectCardState extends State<ProjectCard> {
                 ..rotateY(val),
               child: Container(
                   width: cardWidth,
+
                   height: cardHeight,
                   child: isBack
                       ? Container(
@@ -94,11 +95,12 @@ class _ProjectCardState extends State<ProjectCard> {
                                 const BorderRadius.all(Radius.circular(10)),
                             gradient: LinearGradient(
                                 colors: [
-                                  widget.topColor,
-                                  widget.bottomColor,
+                                  Colors.grey,
+                                  Colors.green
                                 ],
                                 begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter),
+                                end: Alignment.bottomCenter
+                            ),
                           ),
                           padding: const EdgeInsets.all(40),
                           child: Container(
