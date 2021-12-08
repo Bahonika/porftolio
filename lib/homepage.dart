@@ -27,15 +27,25 @@ class _HomePageState extends State<HomePage>
         ),
         content: Center(
           child: Container(
-            height: 100,
-            width: 100,
-            alignment: Alignment.bottomRight,
-            decoration: const BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(25.0),
-                    bottomLeft: Radius.circular(25.0))),
-          ),
+            padding: const EdgeInsets.all(40),
+            child: Container(
+                alignment: Alignment.center,
+                child: Image.asset(
+                  "assets/tt.png" ,
+                )),
+            width: 309,
+            height: 474,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              gradient: LinearGradient(
+                  colors: [
+                    Color.fromRGBO(0, 78, 125, 1.0),
+                    Color.fromRGBO(151, 237, 237, 1.0),
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter),
+            ),
+          )
         )),
     ContentView(
         tab: CustomTab(
