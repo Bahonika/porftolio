@@ -114,13 +114,17 @@ class _ProjectCardState extends State<ProjectCard> {
                           child: Container(
                             padding: EdgeInsets.all(20),
                             decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                              color: widget.topColor,
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              gradient: LinearGradient(
+                                  colors: [
+                                    widget.topColor,
+                                    widget.bottomColor,
+                                  ],
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter),
                             ),
                             child: Stack(
                               // crossAxisAlignment: CrossAxisAlignment.start,
-
                               children: [
                                 Align(
                                   alignment: Alignment.topLeft,
@@ -129,8 +133,10 @@ class _ProjectCardState extends State<ProjectCard> {
                                         textStyle: TextStyle(
                                             fontSize: textSize,
                                             color: Colors.white,
-                                            fontWeight: FontWeight.bold),
-                                      )),
+                                            fontWeight: FontWeight.bold
+                                        ),
+                                      )
+                                  ),
                                 ),
                                 // const SizedBox(
                                 //   height: 40,
@@ -150,6 +156,7 @@ class _ProjectCardState extends State<ProjectCard> {
                                   child: Container(
                                     width: cardWidth * 0.5,
                                     height: cardHeight * 0.1,
+
                                     child: ElevatedButton(
                                         onPressed: () => launchURL(),
                                         style: ElevatedButton.styleFrom(
