@@ -1,4 +1,3 @@
-import 'dart:js';
 
 import 'package:bahonika_s/content_view.dart';
 import 'package:bahonika_s/custom_tab.dart';

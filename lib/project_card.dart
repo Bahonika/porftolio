@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -89,23 +87,22 @@ class _ProjectCardState extends State<ProjectCard> {
                   width: cardWidth,
                   height: cardHeight,
                   decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.blue),
                   child: isBack
                       ? Container(
                           decoration: BoxDecoration(
-
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(10)),
-                            gradient: LinearGradient(
-                                colors: [
-                                  widget.topColor,
-                                  widget.bottomColor,
-                                ],
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter),
+                            // gradient: LinearGradient(
+                            //     colors: [
+                            //       widget.topColor,
+                            //       widget.bottomColor,
+                            //     ],
+                            //     begin: Alignment.topCenter,
+                            //     end: Alignment.bottomCenter),
                           ),
-                          padding: EdgeInsets.all(40),
+                          padding: const EdgeInsets.all(40),
                           child: Container(
                               alignment: Alignment.center,
                               child: Image.asset(
@@ -118,7 +115,6 @@ class _ProjectCardState extends State<ProjectCard> {
                           child: Container(
                             padding: EdgeInsets.all(20),
                             decoration: BoxDecoration(
-
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                               color: widget.topColor,

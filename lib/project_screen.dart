@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:bahonika_s/project_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
