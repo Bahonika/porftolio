@@ -89,9 +89,14 @@ class _ProjectCardState extends State<ProjectCard> {
                   height: cardHeight,
                   child: isBack
                       ? Container(
+                          padding: const EdgeInsets.all(40),
+                          child: Container(
+                              alignment: Alignment.center,
+                              child: Image.asset(
+                                "assets/" + widget.imageName,
+                              )),
                           decoration: BoxDecoration(
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(10)),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
                             gradient: LinearGradient(
                                 colors: [
                                   widget.topColor,
@@ -100,12 +105,6 @@ class _ProjectCardState extends State<ProjectCard> {
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter),
                           ),
-                          padding: const EdgeInsets.all(40),
-                          child: Container(
-                              alignment: Alignment.center,
-                              child: Image.asset(
-                                "assets/" + widget.imageName,
-                              )),
                         )
                       : Transform(
                           alignment: Alignment.center,
