@@ -85,8 +85,6 @@ class _ProjectCardState extends State<ProjectCard> {
                 ..setEntry(3, 2, 0.001)
                 ..rotateY(val),
               child: Container(
-                  width: cardWidth,
-                  height: cardHeight,
                   child: isBack
                       ? Container(
                           padding: const EdgeInsets.all(40),
@@ -114,6 +112,8 @@ class _ProjectCardState extends State<ProjectCard> {
 
                           child: Container(
                             padding: EdgeInsets.all(20),
+                            width: 309,
+                            height: 474,
                             decoration: BoxDecoration(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
