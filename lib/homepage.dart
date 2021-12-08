@@ -3,7 +3,11 @@ import 'dart:js';
 import 'package:bahonika_s/content_view.dart';
 import 'package:bahonika_s/custom_tab.dart';
 import 'package:bahonika_s/custom_tab_bar.dart';
+import 'package:bahonika_s/project_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+import 'main.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -26,6 +30,7 @@ class _HomePageState extends State<HomePage>
           child: Container(
             height: 100,
             width: 100,
+            alignment: Alignment.bottomRight,
             decoration: const BoxDecoration(
                 color: Colors.green,
                 borderRadius: BorderRadius.only(
@@ -53,15 +58,7 @@ class _HomePageState extends State<HomePage>
           title: "Projects",
         ),
         content: Center(
-          child: Container(
-            height: 100,
-            width: 100,
-            decoration: const BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(25.0),
-                    bottomLeft: Radius.circular(25.0))),
-          ),
+          child: ProjectScreen(),
         )),
   ];
 
@@ -92,8 +89,10 @@ class _HomePageState extends State<HomePage>
           padding: EdgeInsets.only(top: topPadding),
           child: LayoutBuilder(builder: (context, constraints) {
             if (constraints.maxWidth > 715) {
+              isMobile = false;
               return desctopView();
             } else {
+              isMobile = true;
               return mobileView();
             }
           }),

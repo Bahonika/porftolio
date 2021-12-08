@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.28 841.89" style="" xml:space="preserve">
+<!--<style type="text/css">-->
+<!--	.st0{fill:#E94F35;}-->
+<!--	.st1{fill:#E73926;}-->
+<!--	.st2{fill:#E41F1A;}-->
+<!--	.st3{fill:#DC0812;}-->
+<!--	.st4{fill:#CE0B10;}-->
+<!--	.st5{fill:#C00D0D;}-->
+<!--	.st6{fill:#B20F0B;}-->
+<!--	.st7{fill:#A31008;}-->
+<!--	.st8{fill:#E0E379;}-->
+<!--	.st9{fill:#DCE064;}-->
+<!--	.st10{fill:#D7DC4C;}-->
+<!--	.st11{fill:#D3D933;}-->
+<!--	.st12{fill:#CFD70A;}-->
+<!--	.st13{fill:#C4CE00;}-->
+<!--	.st14{fill:#008EBA;}-->
+<!--	.st15{fill:#0085AE;}-->
+<!--	.st16{fill:#007CA1;}-->
+<!--</style>-->
+<g id="Слой_4">
+</g>
+<g id="Слой_1">
+	<g>
+		<path style="fill:#E94F35;" d="M184.25,293.39h99.21v28.35H170.08v-14.17C170.08,299.73,176.42,293.39,184.25,293.39z"/>
+		<path style="fill:#E94F35;" d="M311.81,293.39h99.21c7.83,0,14.17,6.35,14.17,14.17v14.17H311.81V293.39z"/>
+		<rect x="170.08" y="321.73" style="fill:#E73926;" width="113.39" height="28.35"/>
+		<rect x="311.81" y="321.73" style="fill:#E73926;" width="113.39" height="28.35"/>
+		<rect x="170.08" y="350.08" style="fill:#E41F1A;" width="113.39" height="28.35"/>
+		<rect x="311.81" y="350.08" style="fill:#E41F1A;" width="113.39" height="28.35"/>
+		<rect x="170.08" y="378.43" style="fill:#DC0812;" width="113.39" height="28.35"/>
+		<rect x="311.81" y="378.43" style="fill:#DC0812;" width="113.39" height="28.35"/>
+		<rect x="170.08" y="435.12" style="fill:#CE0B10;" width="113.39" height="28.35"/>
+		<rect x="311.81" y="435.12" style="fill:#CE0B10;" width="113.39" height="28.35"/>
+		<rect x="170.08" y="463.46" style="fill:#C00D0D;" width="113.39" height="28.35"/>
+		<rect x="311.81" y="463.46" style="fill:#C00D0D;" width="113.39" height="28.35"/>
+		<rect x="170.08" y="491.81" style="fill:#B20F0B;" width="113.39" height="28.35"/>
+		<rect x="311.81" y="491.81" style="fill:#B20F0B;" width="113.39" height="28.35"/>
+		<path style="fill:#A31008;" d="M170.08,520.16h113.39v28.35h-99.21c-7.83,0-14.17-6.35-14.17-14.17V520.16z"/>
+		<path style="fill:#A31008;" d="M311.81,520.16H425.2v14.17c0,7.83-6.35,14.17-14.17,14.17h-99.21V520.16z"/>
+	</g>
+</g>
+<g id="Слой_2">
+	<g>
+		<g>
+			<path style="fill:#E0E379;" d="M311.81,335.91h56.69c7.83,0,14.17,6.35,14.17,14.17v14.17h-70.87V335.91z"/>
+			<path style="fill:#E0E379;" d="M226.77,335.91h56.69v28.35H212.6v-14.17C212.6,342.25,218.94,335.91,226.77,335.91z"/>
+			<rect x="311.81" y="364.25" style="fill:#DCE064;" width="70.87" height="28.35"/>
+			<rect x="212.6" y="364.25" style="fill:#DCE064;" width="70.87" height="28.35"/>
+			<rect x="311.81" y="392.6" style="fill:#D7DC4C;" width="70.87" height="28.35"/>
+			<rect x="212.6" y="392.6" style="fill:#D7DC4C;" width="70.87" height="28.35"/>
+			<rect x="311.81" y="420.94" style="fill:#D3D933;" width="70.87" height="28.35"/>
+			<rect x="212.6" y="420.94" style="fill:#D3D933;" width="70.87" height="28.35"/>
+			<rect x="311.81" y="449.29" style="fill:#CFD70A;" width="70.87" height="28.35"/>
+			<rect x="212.6" y="449.29" style="fill:#CFD70A;" width="70.87" height="28.35"/>
+			<path style="fill:#C4CE00;" d="M311.81,477.64h70.87v14.17c0,7.83-6.35,14.17-14.17,14.17h-56.69V477.64z"/>
+			<path style="fill:#C4CE00;" d="M212.6,477.64h70.87v28.35h-56.69c-7.83,0-14.17-6.35-14.17-14.17V477.64z"/>
+		</g>
+	</g>
+</g>
+<g id="Слой_3">
+	<path style="fill:#008EBA;" d="M269.29,378.43h56.69c7.83,0,14.17,6.35,14.17,14.17v14.17h-85.04V392.6
+		C255.12,384.77,261.46,378.43,269.29,378.43z"/>
+	<rect x="255.12" y="406.77" style="fill:#0085AE;" width="85.04" height="28.35"/>
+	<path style="fill:#007CA1;" d="M255.12,435.12h85.04v14.17c0,7.83-6.35,14.17-14.17,14.17h-56.69c-7.83,0-14.17-6.35-14.17-14.17V435.12z"/>
+</g>
+</svg>
