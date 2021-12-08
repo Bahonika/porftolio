@@ -95,8 +95,8 @@ class _ProjectCardState extends State<ProjectCard> {
                               child: Image.asset(
                                 "assets/" + widget.imageName,
                               )),
-                          width: cardWidth,
-                          height: cardHeight,
+                          width: 309,
+                          height: 474,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             gradient: LinearGradient(
@@ -111,17 +111,13 @@ class _ProjectCardState extends State<ProjectCard> {
                       : Transform(
                           alignment: Alignment.center,
                           transform: Matrix4.identity()..rotateY(pi),
+
                           child: Container(
                             padding: EdgeInsets.all(20),
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                              gradient: LinearGradient(
-                                  colors: [
-                                    widget.topColor,
-                                    widget.bottomColor,
-                                  ],
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                              color: widget.topColor,
                             ),
                             child: Stack(
                               // crossAxisAlignment: CrossAxisAlignment.start,
@@ -133,14 +129,9 @@ class _ProjectCardState extends State<ProjectCard> {
                                         textStyle: TextStyle(
                                             fontSize: textSize,
                                             color: Colors.white,
-                                            fontWeight: FontWeight.bold
-                                        ),
-                                      )
-                                  ),
+                                            fontWeight: FontWeight.bold),
+                                      )),
                                 ),
-                                // const SizedBox(
-                                //   height: 40,
-                                // ),
                                 Align(
                                   alignment: Alignment(-1, -0.6),
                                   child: Text(widget.description,
