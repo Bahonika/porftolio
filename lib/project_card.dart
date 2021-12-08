@@ -94,13 +94,13 @@ class _ProjectCardState extends State<ProjectCard> {
                           decoration: BoxDecoration(
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(10)),
-                            // gradient: LinearGradient(
-                            //     colors: [
-                            //       widget.topColor,
-                            //       widget.bottomColor,
-                            //     ],
-                            //     begin: Alignment.topCenter,
-                            //     end: Alignment.bottomCenter),
+                            gradient: LinearGradient(
+                                colors: [
+                                  widget.topColor,
+                                  widget.bottomColor,
+                                ],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter),
                           ),
                           padding: const EdgeInsets.all(40),
                           child: Container(
