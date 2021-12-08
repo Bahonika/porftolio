@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage>
           child: Container(
             height: 100,
             width: 100,
+            child: Text('t'),
             decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
