@@ -92,10 +92,11 @@ class _ProjectCardState extends State<ProjectCard> {
                           padding: const EdgeInsets.all(40),
                           child: Container(
                               alignment: Alignment.center,
-                              // child: Image.asset(
-                              //   "assets/" + widget.imageName,
-                              // )
-                          ),
+                              child: Image.asset(
+                                "assets/" + widget.imageName,
+                              )),
+                          width: cardWidth,
+                          height: cardHeight,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             gradient: LinearGradient(
