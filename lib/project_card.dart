@@ -42,6 +42,7 @@ class _ProjectCardState extends State<ProjectCard> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+
     double cardWidth = screenWidth > 1360
         ? 309
         : screenWidth > 1000
@@ -86,9 +87,6 @@ class _ProjectCardState extends State<ProjectCard> {
               child: Container(
                   width: cardWidth,
                   height: cardHeight,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Colors.blue),
                   child: isBack
                       ? Container(
                           decoration: BoxDecoration(
