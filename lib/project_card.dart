@@ -85,6 +85,8 @@ class _ProjectCardState extends State<ProjectCard> {
                 ..setEntry(3, 2, 0.001)
                 ..rotateY(val),
               child: Container(
+                  width: cardWidth,
+                  height: cardHeight,
                   child: isBack
                       ? Container(
                           padding: const EdgeInsets.all(40),
@@ -93,27 +95,23 @@ class _ProjectCardState extends State<ProjectCard> {
                               child: Image.asset(
                                 "assets/" + widget.imageName,
                               )),
-                          width: 309,
-                          height: 474,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                            gradient: LinearGradient(
-                                colors: [
-                                  widget.topColor,
-                                  widget.bottomColor,
-                                ],
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter),
-                          ),
+                    decoration: BoxDecoration(
+                      borderRadius:
+                      BorderRadius.all(Radius.circular(10)),
+                      gradient: LinearGradient(
+                          colors: [
+                            widget.topColor,
+                            widget.bottomColor,
+                          ],
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter),
+                    ),
                         )
                       : Transform(
                           alignment: Alignment.center,
                           transform: Matrix4.identity()..rotateY(pi),
-
                           child: Container(
                             padding: EdgeInsets.all(20),
-                            width: 309,
-                            height: 474,
                             decoration: BoxDecoration(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
@@ -121,6 +119,7 @@ class _ProjectCardState extends State<ProjectCard> {
                             ),
                             child: Stack(
                               // crossAxisAlignment: CrossAxisAlignment.start,
+
                               children: [
                                 Align(
                                   alignment: Alignment.topLeft,
@@ -132,6 +131,9 @@ class _ProjectCardState extends State<ProjectCard> {
                                             fontWeight: FontWeight.bold),
                                       )),
                                 ),
+                                // const SizedBox(
+                                //   height: 40,
+                                // ),
                                 Align(
                                   alignment: Alignment(-1, -0.6),
                                   child: Text(widget.description,
@@ -147,7 +149,6 @@ class _ProjectCardState extends State<ProjectCard> {
                                   child: Container(
                                     width: cardWidth * 0.5,
                                     height: cardHeight * 0.1,
-
                                     child: ElevatedButton(
                                         onPressed: () => launchURL(),
                                         style: ElevatedButton.styleFrom(
