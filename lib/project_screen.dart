@@ -7,31 +7,30 @@ import 'main.dart';
 class ProjectScreen extends StatelessWidget {
   Widget Timetable = ProjectCard(
     imageName: "tt.png",
-    topColor: Color.fromRGBO(0, 78, 125, 1.0),
-    bottomColor: Color.fromRGBO(151, 237, 237, 1.0),
+    topColor: const Color.fromARGB(255, 0, 78, 125),
+    bottomColor: const Color.fromARGB(255, 151, 237, 237),
     text: "Timetable",
     description: "Schedule aggregator for Murmansk Arctic State University",
   );
 
   Widget UselessBlocks = ProjectCard(
     imageName: "ub.png",
-    topColor: Color.fromRGBO(255, 148, 11, 1),
-    bottomColor: Color.fromRGBO(151, 237, 237, 1.0),
+    topColor: const Color.fromARGB(255, 255, 148, 11),
+    bottomColor: const Color.fromARGB(255, 151, 237, 237),
     text: "Useless blocs",
     description: "Monologue - clicker game",
   );
 
   Widget PolarSun = ProjectCard(
     imageName: "ps.png",
-    topColor: Color.fromRGBO(93, 145, 72, 1),
-    bottomColor: Color.fromRGBO(151, 237, 237, 1.0),
+    topColor: const Color.fromARGB(255, 93, 145, 72),
+    bottomColor: const Color.fromARGB(255, 151, 237, 237),
     text: "Polar Sun",
     description: "Digital Herbarium of Murmansk Arctic State University",
   );
 
   @override
   Widget build(BuildContext context) {
-
     return SingleChildScrollView(
       child: isMobile
           ? Column(
@@ -50,7 +49,14 @@ class ProjectScreen extends StatelessWidget {
                 SizedBox(
                   height: 100,
                 ),
-                PolarSun,
+                ProjectCard(
+                  imageName: "ps.png",
+                  topColor: const Color.fromARGB(255, 93, 145, 72),
+                  bottomColor: const Color.fromARGB(255, 151, 237, 237),
+                  text: "Polar Sun",
+                  description:
+                      "Digital Herbarium of Murmansk Arctic State University",
+                ),
                 SizedBox(
                   height: 100,
                 ),
