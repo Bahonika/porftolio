@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'dart:math';
 
 import 'package:url_launcher/url_launcher.dart';
@@ -9,22 +7,23 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ProjectCard extends StatefulWidget {
   // const ProjectCard({Key? key}) : super(key: key);
-  ProjectCard(
-      {required this.imageName,
-      required this.topColor,
-      required this.bottomColor,
-      required this.text,
-      required this.description});
+  ProjectCard({
+    required this.imageName,
+    required this.mainColor,
+    required this.secondColor,
+    required this.text,
+    required this.description,
+  });
 
   String imageName, text, description;
-  Color topColor, bottomColor;
+  Color mainColor, secondColor;
 
   @override
   _ProjectCardState createState() => _ProjectCardState();
 }
 
 class _ProjectCardState extends State<ProjectCard> {
-  bool isBack = true;
+  bool isBack = false;
   double angle = 0;
 
   void launchURL() async {
@@ -79,6 +78,9 @@ class _ProjectCardState extends State<ProjectCard> {
             } else {
               isBack = true;
             }
+
+            List<Color> colors = [widget.mainColor, widget.secondColor];
+
             return Transform(
               alignment: Alignment.center,
               transform: Matrix4.identity()
@@ -87,26 +89,43 @@ class _ProjectCardState extends State<ProjectCard> {
               child: Container(
                   width: cardWidth,
                   height: cardHeight,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
                   child: isBack
-                      ? Container(
-                          padding: const EdgeInsets.all(40),
-                          child: Container(
-                              alignment: Alignment.center,
-                              child: Image.asset(
-                                "assets/" + widget.imageName,
-                              )),
-                    decoration: BoxDecoration(
-                      borderRadius:
-                      BorderRadius.all(Radius.circular(10)),
-                      gradient: LinearGradient(
-                          colors: [
-                            widget.topColor,
-                            widget.bottomColor,
-                          ],
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter),
-                    ),
-                        )
+                      ? true
+                          ? Stack(children: [
+                              ClipRRect(
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(10)),
+                                child: ShaderMask(
+                                  shaderCallback: (bounds) => LinearGradient(
+                                          colors: colors,
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter)
+                                      .createShader(bounds),
+                                  blendMode: BlendMode.srcOver,
+                                  child: Container(
+                                    width: cardWidth,
+                                    height: cardHeight,
+                                    decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10)),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Container(
+                                    padding: const EdgeInsets.all(40),
+                                    alignment: Alignment.center,
+                                    child: Image.asset(
+                                      "assets/" + widget.imageName,
+                                    )),
+                              ),
+                            ])
+                          : const SizedBox.shrink()
                       : Transform(
                           alignment: Alignment.center,
                           transform: Matrix4.identity()..rotateY(pi),
@@ -115,11 +134,9 @@ class _ProjectCardState extends State<ProjectCard> {
                             decoration: BoxDecoration(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
-                              color: widget.topColor,
+                              color: widget.mainColor,
                             ),
                             child: Stack(
-                              // crossAxisAlignment: CrossAxisAlignment.start,
-
                               children: [
                                 Align(
                                   alignment: Alignment.topLeft,
@@ -152,9 +169,9 @@ class _ProjectCardState extends State<ProjectCard> {
                                     child: ElevatedButton(
                                         onPressed: () => launchURL(),
                                         style: ElevatedButton.styleFrom(
-                                          primary: Color.lerp(widget.topColor,
+                                          primary: Color.lerp(widget.mainColor,
                                               Colors.black, 0.5),
-                                          onPrimary: widget.topColor,
+                                          onPrimary: widget.mainColor,
                                           elevation: 0,
                                         ),
                                         child: Center(
@@ -162,7 +179,7 @@ class _ProjectCardState extends State<ProjectCard> {
                                             "Check It!",
                                             style: TextStyle(
                                                 fontSize: descriptionSize,
-                                                color: widget.topColor),
+                                                color: widget.mainColor),
                                           ),
                                         )),
                                   ),

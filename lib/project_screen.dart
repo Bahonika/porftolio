@@ -7,24 +7,24 @@ import 'main.dart';
 class ProjectScreen extends StatelessWidget {
   Widget Timetable = ProjectCard(
     imageName: "tt.png",
-    topColor: const Color.fromARGB(255, 0, 78, 125),
-    bottomColor: const Color.fromARGB(255, 151, 237, 237),
+    mainColor: const Color.fromARGB(255, 0, 78, 125),
+    secondColor: const Color.fromARGB(255, 151, 237, 237),
     text: "Timetable",
     description: "Schedule aggregator for Murmansk Arctic State University",
   );
 
   Widget UselessBlocks = ProjectCard(
     imageName: "ub.png",
-    topColor: const Color.fromARGB(255, 255, 148, 11),
-    bottomColor: const Color.fromARGB(255, 151, 237, 237),
+    mainColor: const Color.fromARGB(255, 255, 148, 11),
+    secondColor: const Color.fromARGB(255, 151, 237, 237),
     text: "Useless blocs",
     description: "Monologue - clicker game",
   );
 
   Widget PolarSun = ProjectCard(
     imageName: "ps.png",
-    topColor: const Color.fromARGB(255, 93, 145, 72),
-    bottomColor: const Color.fromARGB(255, 151, 237, 237),
+    mainColor: const Color.fromARGB(255, 93, 145, 72),
+    secondColor: const Color.fromARGB(255, 151, 237, 237),
     text: "Polar Sun",
     description: "Digital Herbarium of Murmansk Arctic State University",
   );
@@ -49,14 +49,7 @@ class ProjectScreen extends StatelessWidget {
                 SizedBox(
                   height: 100,
                 ),
-                ProjectCard(
-                  imageName: "ps.png",
-                  topColor: const Color.fromARGB(255, 93, 145, 72),
-                  bottomColor: const Color.fromARGB(255, 151, 237, 237),
-                  text: "Polar Sun",
-                  description:
-                      "Digital Herbarium of Murmansk Arctic State University",
-                ),
+                PolarSun,
                 SizedBox(
                   height: 100,
                 ),

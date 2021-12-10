@@ -1,7 +1,7 @@
-
 import 'package:bahonika_s/content_view.dart';
 import 'package:bahonika_s/custom_tab.dart';
 import 'package:bahonika_s/custom_tab_bar.dart';
+import 'package:bahonika_s/project_card.dart';
 import 'package:bahonika_s/project_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -25,54 +25,12 @@ class _HomePageState extends State<HomePage>
         tab: CustomTab(
           title: "Home",
         ),
-        content: Center(
-          child: GestureDetector(
-            onTap: () => print("hello"),
-            child: Container(
-              padding: const EdgeInsets.all(40),
-              child: Container(
-                  alignment: Alignment.center,
-                  child: Image.asset(
-                    "assets/tt.png" ,
-                  )),
-              width: 309,
-              height: 474,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                gradient: LinearGradient(
-                    colors: [
-                      Color.fromRGBO(0, 78, 125, 1.0),
-                      Color.fromRGBO(151, 237, 237, 1.0),
-                    ],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter),
-              ),
-            ),
-          )
-        )),
+        content: Center()),
     ContentView(
         tab: CustomTab(
           title: "About",
         ),
-        content: Center(
-          child: Container(
-            height: 100,
-            width: 100,
-            child: Text('t'),
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Colors.black,
-                    Colors.white,
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(25.0),
-                    bottomLeft: Radius.circular(25.0))),
-          ),
-        )),
+        content: Center()),
     ContentView(
         tab: CustomTab(
           title: "Projects",

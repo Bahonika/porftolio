@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/bahonika/bahonika_s/BuildConfig.java
+ com.bahonika.bahonika_s.BuildConfig
